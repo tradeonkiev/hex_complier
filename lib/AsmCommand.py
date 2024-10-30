@@ -66,4 +66,3 @@ class AsmCommand:
 
     def __call__(self, *args, **kwargs):
         return f'{self.row_index[2:]:0>2}: {self.hex_format: >12} \t{self.name}'
-

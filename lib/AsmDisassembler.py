@@ -60,17 +60,13 @@ class AsmDisassembler:
             binary_form += f'{bin(int(hex_format[i: i+2], 16))[2:]:>08}'
         answer = {}
         max_counter = 0
-        # print(hex_format)
         for command, mask in command_list.items():
             mask = mask.replace(' ', '')
-            # print('=' * 10)
-            # print(command, mask, binary_form)
             match_counter = 0
             params = {}
             if len(mask) != len(binary_form):
                 continue
             for mask_index, tagger in enumerate(mask):
-                # print(binary_form[mask_index], tagger, tagger == binary_form[mask_index])
                 if tagger == binary_form[mask_index]:
                     match_counter += 1
                 elif tagger not in '01':
@@ -95,5 +91,3 @@ class AsmDisassembler:
             answer.append(row[8:-2])
         return answer
 
-
-AsmDisassembler().__call__()

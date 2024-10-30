@@ -48,8 +48,7 @@ class AsmParameterInstruction:
                 "K": {"constraints": "0<= <=255", "options": None, "mask_bits": "KKKK KKKK"}
             }
         },
-        'ser Rd':
-            {
+        'ser Rd':{
                 "parameters": {
                     "Rd": {"constraints": "16< <31", "options": 'r', "mask_bits": "dddd"},
                 }
